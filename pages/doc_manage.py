@@ -7,14 +7,14 @@ from services.doc_service import DocumentService
 # 初始化文档服务
 doc_service = DocumentService()
 
-st.title("文档管理")
+st.header("文档管理")
 
 # 创建两个选项卡：文档上传和文档管理
 tab1, tab2 = st.tabs(["文档上传", "文档管理"])
 
 # 文档上传选项卡
 with tab1:
-    st.header("上传文档")
+    st.subheader("上传文档")
     
     # 文件上传组件
     uploaded_file = st.file_uploader("选择要上传的文档", type=["txt", "md"], help="目前仅支持txt和md格式")
@@ -63,7 +63,7 @@ with tab1:
 
 # 文档管理选项卡
 with tab2:
-    st.header("文档列表")
+    st.subheader("文档列表")
     
     # 搜索和过滤
     search_query = st.text_input("按标题搜索文档", "")

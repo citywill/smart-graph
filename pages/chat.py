@@ -8,7 +8,7 @@ import streamlit.components.v1 as components
 # 初始化RAG服务
 rag_service = RAGService()
 
-st.title("智能对话")
+st.header("智能对话")
 
 # 初始化会话状态
 if "messages" not in st.session_state:
@@ -37,7 +37,7 @@ if st.session_state.graph_data is not None:
         net.add_edge(edge["from"], edge["to"], title=edge["label"])
     
     # 设置图的物理布局
-    net.barnes_hut(gravity=-80000, central_gravity=0.3, spring_length=250, spring_strength=0.001, damping=0.09)
+    net.barnes_hut(gravity=-800, central_gravity=0.3, spring_length=250, spring_strength=0.001, damping=0.09)
     
     # 保存并显示交互式图表
     net.save_graph("temp_graph.html")

@@ -30,7 +30,7 @@ class RAGService:
         query_embedding = self.llm.get_embedding(query)
         
         # 2. 向量检索相关块
-        relevant_chunks = self.neo4j.get_relevant_chunks(query_embedding, limit=5)
+        relevant_chunks = self.neo4j.get_relevant_chunks(query_embedding, limit=1)
         
         # 3. 如果没有找到相关块，返回无相关信息的回复
         if not relevant_chunks:

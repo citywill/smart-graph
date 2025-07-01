@@ -16,23 +16,5 @@ pg = st.navigation(pages)
 st.title("GraphRAG智能问答系统")
 st.write("这是一款基于图数据库和向量检索的智能问答系统，支持文档管理和智能对话功能。")
 
-# 展示系统架构图
-st.subheader("系统架构")
-st.write("""
-本系统基于以下技术构建:
-- 前端框架: Streamlit
-- 智能体框架: LangChain
-- 数据库: Neo4j
-- 向量模型: BGE M3 (通过Ollama API)
-- 大语言模型: 兼容OpenAI接口的API
-""")
-
-# 展示功能模块
-st.subheader("功能模块")
-st.write("""
-- **文档管理**: 上传、查看、下载和删除文档
-- **智能对话**: 基于文档内容的问答交互，支持知识图谱可视化
-""")
-
 # 运行导航
 pg.run()
