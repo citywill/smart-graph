@@ -1,0 +1,10 @@
+streamlit
+langchain
+neo4j
+requests
+python-dotenv
+numpy
+pandas
+matplotlib
+pyvis
+networkx
